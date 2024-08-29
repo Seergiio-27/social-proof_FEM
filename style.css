@@ -1,0 +1,194 @@
+
+/*------------------*\
+  Custom properties
+\*------------------*/
+
+:root {
+    /* Accent */
+    --clr-dark-magenta: hsl(300, 43%, 22%) ;
+    --clr-soft-pink:    hsl(333, 80%, 67%) ;
+
+    /* Neutral */
+    --clr-grayish-magenta:       hsl(303, 10%, 53%);
+    --clr-light-grayish-magenta: hsl(300, 24%, 96%);
+    --clr-white:                 hsl(0, 0%, 100%);
+
+    /* Typography */
+    --fs-main: 0,9375rem;
+    --ff-main: "League Spartan", sans-serif;
+
+    --fw-normal:    400;
+    --fw-semi-bold: 500;
+    --fw-bold:      700;
+}
+
+/*------------------*\
+  CSS resets
+\*------------------*/
+
+/* Box sizing */
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+}
+
+/* Reset margins */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+p,
+figure,
+picture {
+    margin: 0; 
+}
+
+/* make form elements easier to work with */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/*------------------*\
+  Utilitiy classes
+\*------------------*/
+
+.grid {
+  display: grid;
+  gap: var(--gap, 1rem);
+}
+
+.flex {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.main-heading { 
+  padding-inline: 1.8rem;
+  line-height: .75;
+  padding-top: 1.5rem;
+ }
+
+.center { text-align: center; }
+.normal { font-weight: var(--fw-normal);}
+.semi-bold { font-weight: var(--fw-semi-bold); }
+.bold { font-weight: var(--fw-bold);}
+.spacing { padding-block: 1rem 1.75rem;}
+
+.text-gray { color: var(--clr-grayish-magenta); }
+.text-light-gray { color: var(--clr-light-grayish-magenta); }
+.text-pink { color: var(--clr-soft-pink); }
+.text-dark-magenta { color: var(--clr-dark-magenta); }
+
+/*------------------*\
+  General styles
+\*------------------*/
+
+body {
+  font-family: var(--ff-main);
+  font-size: var(--fs-main);
+  padding: 2.5rem 1.6rem;
+  line-height: 1.5;
+}
+
+.review-card {
+  padding: 1rem;
+  border-radius: 10px;
+  background-color: var(--clr-light-grayish-magenta);
+}
+
+.social-proof__card {
+  background-color: var(--clr-dark-magenta);
+  border-radius: 10px;
+  padding: 1.5rem;
+}
+
+.profile-pic {
+  border-radius: 50%;
+  width: 50px;
+}
+
+.social-proof {
+  margin-block: 2.5rem;
+}
+
+/*------------------*\
+  Media queries
+\*------------------*/
+
+@media (min-width: 480px) {
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  }
+
+  .main-container {
+    max-width: 550px;
+  }
+}
+
+@media (min-width: 1024px){
+  body {
+    display: grid;
+    place-content: center;
+    min-height: 100vh;
+  }
+
+  .main-container {
+    display: grid;
+    gap: -10rem;
+    max-width: 1150px;
+  }
+
+  .section-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 1rem;
+    padding-block: 2rem;
+    padding-inline: 2rem;
+    /* max-width: 1150px; */
+  }
+
+  .main-heading{
+    font-size: 2.5rem;
+    text-align: left;
+    padding-inline: 0;
+  }
+
+  .spacing {
+    text-align: left;
+  }
+
+  .review-card {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: .75rem;
+    width: 23rem;
+  }
+
+  .spacing-review-1 { margin-left: 3rem; margin-right: 0rem; }
+  .spacing-review-2 { margin-left: 6rem; margin-right: 0rem;}
+
+  .social-proof {
+    grid-template-columns: 1fr 1fr 1fr;
+    /* max-width: 1150px; */
+    margin-block: none;
+  }
+
+  .social-proof__card {
+    height: 15rem;
+    max-width: 21rem;
+  }
+
+  .social-proof-1 { margin-top: 1rem; }
+  .social-proof-2 { margin-top: 2rem; }
+
+}
