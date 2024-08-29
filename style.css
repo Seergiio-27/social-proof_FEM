@@ -95,6 +95,11 @@ body {
   font-size: var(--fs-main);
   padding: 2.5rem 1.6rem;
   line-height: 1.5;
+  background-image: url("images/bg-pattern-top-mobile.svg"),
+                    url("images/bg-pattern-bottom-mobile.svg");
+  background-repeat:   no-repeat, no-repeat;
+  background-position: top left, bottom right;
+  background-size:     100%;
 }
 
 .review-card {
@@ -127,6 +132,11 @@ body {
     display: grid;
     place-content: center;
     min-height: 100vh;
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+                      url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat:   no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size:     75%, 100%;
   }
 
   .main-container {
@@ -139,6 +149,11 @@ body {
     display: grid;
     place-content: center;
     min-height: 100vh;
+    background-image: url("images/bg-pattern-top-desktop.svg"),
+                      url("images/bg-pattern-bottom-desktop.svg");
+    background-repeat:   no-repeat, no-repeat;
+    background-position: top left, bottom right;
+    background-size:     50%, 75%;
   }
 
   .main-container {
@@ -150,20 +165,26 @@ body {
   .section-1 {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 1rem;
+    gap: 4rem;
     padding-block: 2rem;
     padding-inline: 2rem;
-    /* max-width: 1150px; */
   }
 
   .main-heading{
-    font-size: 2.5rem;
+    font-size: 4rem;
     text-align: left;
     padding-inline: 0;
+    padding-bottom: 1rem;
   }
 
   .spacing {
     text-align: left;
+  }
+
+  .reviews {
+    display: grid;
+    padding-block: 2.5rem;
+    gap: 1rem;
   }
 
   .review-card {
